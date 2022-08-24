@@ -1,0 +1,14 @@
+---
+
+name : wavenet
+
+# generate.pyを実行したときのデータを保存するディレクトリまでのパス
+generate_save_path : "/home/usr4/r70264c/lip2sp_pytorch/wavenet/result/generate"
+
+# 1to5
+check_1to5 : True
+
+# データまでのパス(lip2spのものを転用)
+data_root : "/home/usr4/r70264c/dataset/lip/np_files/lip_cropped_128128/test"
+mean_std_path : "/home/usr4/r70264c/dataset/lip/np_files/lip_cropped_128128/mean_std"
+data_root_1to5 : "/home/usr4/r70264c/dataset/lip/np_files/lip_cropped_128128/test_1to5"

@@ -1,0 +1,10 @@
+---
+
+setup:
+    project: wavenet
+    entity:
+    mode: online
+    name : wavenet
+watch:
+    log: all
+    log_freq: 100

@@ -1,0 +1,54 @@
+---
+
+name : wavenet
+
+# デバッグ
+debug : False
+debug_data_len : 1000
+debug_max_epoch : 200
+debug_iter : 1
+
+# checkpointから再開する場合
+check_point_start : False
+start_ckpt_path : 
+
+# 学習したモデルのパラメータを保存するディレクトリまでのパス
+save_path : "/home/usr4/r70264c/lip2sp_pytorch/wavenet/result/train"
+
+# check point path
+ckpt_path : "/home/usr4/r70264c/lip2sp_pytorch/wavenet/check_point"
+ckpt_step : 10
+
+# データまでのパス(lip2spのものを転用)
+data_root : "/home/usr4/r70264c/dataset/lip/np_files/lip_cropped_128128/train"
+mean_std_path : "/home/usr4/r70264c/dataset/lip/np_files/lip_cropped_128128/mean_std"
+
+# max_epoch
+max_epoch : 200
+
+# validation lossを計算する間隔
+display_val_loss_step : 10
+
+# dropout
+dropout : 0.5
+
+# global condition
+use_gc : False
+
+# dataloader
+batch_size : 8
+num_workers : 8
+
+# optimizer
+lr : 0.001
+beta_1 : 0.9
+beta_2 : 0.999
+weight_decay : 1.0e-6
+
+# scheduler
+lr_decay_rate : 0.5
+lr_decay_step : 4   # max_epoch // lr_decay_stepでlr_decay_rate倍に学習率を変更
+multi_lr_decay_step : [50, 100]   # 学習率を変更するepoch
+
+# gradient clipping
+max_norm : 3.0
